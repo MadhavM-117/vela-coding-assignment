@@ -20,9 +20,15 @@ class TodoItemList(
     permission_classes = [permissions.IsAuthenticated]
 
     def get(self, request, *args, **kwargs):
+        """
+        Get a list of TodoItems.
+        """
         return self.list(request, *args, **kwargs)
 
     def post(self, request, *args, **kwargs):
+        """
+        Create a new TodoItem
+        """
         return self.create(request, *args, **kwargs)
 
 
@@ -37,7 +43,13 @@ class TodoItemDetail(
     serializer_class = TodoItemSerializer
 
     def get(self, request, *args, **kwargs):
+        """
+        Get a TodoItem instance.
+        """
         return self.retrieve(request, *args, **kwargs)
 
     def put(self, request, *args, **kwargs):
+        """
+        Update a TodoItem instance.
+        """
         return self.update(request, *args, **kwargs)

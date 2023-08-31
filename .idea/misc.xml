@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="Black">
+    <option name="enabledOnSave" value="true" />
+    <option name="executionMode" value="BINARY" />
+    <option name="pathToExecutable" value="$PROJECT_DIR$/api/.venv/bin/black" />
+    <option name="sdkUUID" value="5c434775-dc03-47b3-b024-add73f1a3ad2" />
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_20" project-jdk-name="Python 3.10 (vela-coding-assignment)" project-jdk-type="Python SDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
