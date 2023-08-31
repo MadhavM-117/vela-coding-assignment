@@ -1,25 +1,43 @@
 from django.shortcuts import render
 
 # Create your views here.
-from django.contrib.auth.models import User, Group
+from vela.todolist.models import TodoItem
 from rest_framework import viewsets
-from rest_framework import permissions
-from vela.todolist.serializers import UserSerializer, GroupSerializer
+from rest_framework.response import Response
+from rest_framework import permissions, generics, mixins
+from vela.todolist.serializers import TodoItemSerializer
 
 
-class UserViewSet(viewsets.ModelViewSet):
+class TodoItemList(
+    mixins.ListModelMixin, mixins.CreateModelMixin, generics.GenericAPIView
+):
     """
-    API endpoint that allows users to be viewed or edited.
+    List all TodoItems, or create a new TodoItem.
     """
-    queryset = User.objects.all().order_by('-date_joined')
-    serializer_class = UserSerializer
+
+    queryset = TodoItem.objects.all().order_by("-created")
+    serializer_class = TodoItemSerializer
     permission_classes = [permissions.IsAuthenticated]
 
+    def get(self, request, *args, **kwargs):
+        return self.list(request, *args, **kwargs)
 
-class GroupViewSet(viewsets.ModelViewSet):
+    def post(self, request, *args, **kwargs):
+        return self.create(request, *args, **kwargs)
+
+
+class TodoItemDetail(
+    mixins.RetrieveModelMixin, mixins.UpdateModelMixin, generics.GenericAPIView
+):
     """
-    API endpoint that allows groups to be viewed or edited.
+    Retrieve, or update a TodoItem instance.
     """
-    queryset = Group.objects.all()
-    serializer_class = GroupSerializer
-    permission_classes = [permissions.IsAuthenticated]
+
+    queryset = TodoItem.objects.all()
+    serializer_class = TodoItemSerializer
+
+    def get(self, request, *args, **kwargs):
+        return self.retrieve(request, *args, **kwargs)
+
+    def put(self, request, *args, **kwargs):
+        return self.update(request, *args, **kwargs)
