@@ -1,0 +1,56 @@
+.container {
+    width: 800px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.table {
+    width: 100%;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    box-shadow: 0 0 5px lightgray;
+    padding-bottom: 20px;
+    border-collapse: collapse;
+}
+
+.table > * {
+    text-align: center;
+}
+
+.table  img {
+    object-fit: cover;
+}
+
+.table th {
+    padding: 10px;
+}
+
+.table th, td {
+    border-bottom: 1px solid lightgray;
+    border-collapse: collapse;
+}
+
+.buttonContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+}
+
+.button {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    background-color: white;
+    cursor: pointer;
+    box-shadow: 0 0 5px lightgray;
+}
+
+.button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
