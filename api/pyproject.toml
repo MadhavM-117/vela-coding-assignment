@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "api"
+version = "1.0.0"
+description = "Todo-list API"
+authors = ["Madhav M. <madhavmanoj117@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+Django = "3.2"
+djangorestframework = "^3.14.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
