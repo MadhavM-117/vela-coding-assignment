@@ -6,10 +6,18 @@
   "license": "MIT",
   "scripts": {
     "start": "parcel src/index.html",
-    "build": "parcel build src/index.html"
+    "build": "parcel build src/index.html",
+    "lint": "prettier --write '**/*.*{js,jsx,ts,tsx,json,css,scss}' '!dist' && eslint --cache --ext .js --ext .jsx --ext .ts --ext .tsx --fix ."
   },
   "devDependencies": {
+    "eslint": "^8.48.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
     "parcel": "^2.9.3",
+    "prettier": "^3.0.3",
     "process": "^0.11.10"
   },
   "dependencies": {
