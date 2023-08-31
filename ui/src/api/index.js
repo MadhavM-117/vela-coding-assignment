@@ -2,7 +2,7 @@
  * Get users from the API, with pagination
  * @param baseUrl
  * @param page {number}
- * @returns {Promise<{}>}
+ * @returns {Promise<InternalFetchUsersResponse>}
  */
 export const getUsers = (baseUrl, page = 1) => {
   return fetch(`${baseUrl}/users?` + new URLSearchParams({ page: `${page}` }))
