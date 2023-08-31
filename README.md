@@ -21,6 +21,8 @@ NOTE: At VelaMD our development stack currently uses React (16 at time of writin
 
 # DJANGO (api)
 
+Solution can be found in the `api` directory: [SOLUTION.md](./api/SOLUTION.md)
+
 ## Part 1
 We would like you to create a basic Django application to host a Todo-list API. The requirements are:
 
