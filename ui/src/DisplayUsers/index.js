@@ -10,7 +10,7 @@ export const DisplayUsers = () => {
   const totalPages = users ? users["total_pages"] : 1;
 
   React.useEffect(() => {
-    getUsers("https://reqres.in/api", page).then((r) => {
+    getUsers(page).then((r) => {
       if (r.status === "error") {
         setError(r.message);
         return;

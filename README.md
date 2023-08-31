@@ -1,5 +1,7 @@
 # REACT (ui)
 
+Solution can be found in the `ui` directory: [SOLUTION.md](./ui/SOLUTION.md)
+
 ## Part 1
 Create a simple react component that meets the following requirements:
 

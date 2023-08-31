@@ -15,7 +15,7 @@ export const UserTable = ({ users, page, totalPages, goToPage }) => {
   const goNext = page < totalPages;
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} data-testid="user-table">
       <table className={styles.table}>
         <thead>
           <tr>
