@@ -17,7 +17,6 @@ class TodoItemList(
 
     queryset = TodoItem.objects.all().order_by("-created")
     serializer_class = TodoItemSerializer
-    permission_classes = [permissions.IsAuthenticated]
 
     def get(self, request, *args, **kwargs):
         """

@@ -56,7 +56,7 @@ ROOT_URLCONF = "vela.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [Path.joinpath(BASE_DIR, 'vela', 'templates')],
+        "DIRS": [Path.joinpath(BASE_DIR, "vela", "templates")],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -128,5 +128,6 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 REST_FRAMEWORK = {
     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
+    "TEST_REQUEST_DEFAULT_FORMAT": "json",
     "PAGE_SIZE": 10,
 }
