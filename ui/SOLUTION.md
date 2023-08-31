@@ -4,10 +4,10 @@ This directory contains the solution for the UI part of the project.
 
 ## Part 1
 
-The component that is required to address the requirements in the `DisplayUsers` component. 
+The component that is required to address the requirements in the [`DisplayUsers`](./src/DisplayUsers/index.js) component. 
 
 It will fetch the users data from the API and display it in a table, with a control to get the next and previous page of results.
-The display & navigation logic, and styling is handled by the `UserTable` component.
+The display & navigation logic, and styling is handled by the [`UserTable`](./src/DisplayUsers/UserTable.js) component.
 
 The `DisplayUsers` component is a functional component, and uses the `useEffect` hook to fetch the data from the API.
 In case of error, or while the data is being fetched, appropriate placeholders are shown which can be improved upon. 
@@ -28,4 +28,4 @@ However, we must be careful to ensure the right amount of flexibility in the tes
 Snapshot tests are not viable, as they will break on any change in the data.
 Instead, we use tests to verify that the data being passed has the appropriate 'type' or 'shape' that the component expects.
 
-This has been done in `src/api/index.test.js` using jest.
+This has been done in [`src/api/index.test.js`](./src/api/index.test.js) using jest.
